@@ -24,6 +24,10 @@ const albumSchema = new mongoose.Schema({
   genre: {
     type: String,
     default: 'Bollywood'
+  },
+  spotifyUrl: {
+    type: String,
+    default: ''
   }
 }, {
   timestamps: true
