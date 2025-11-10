@@ -42,17 +42,23 @@ const Home = () => {
         <h2 className="section-title">Featured Albums</h2>
         <div className="featured-albums">
           <div className="album-card">
-            <div className="album-image">Album 1</div>
+            <div className="album-image">
+              <img src="https://wallpapercave.com/wp/wp7717914.jpg" alt="Best of Arijit" />
+            </div>
             <h3>Best of Arijit</h3>
             <p>Greatest Hits Collection</p>
           </div>
           <div className="album-card">
-            <div className="album-image">Album 2</div>
+            <div className="album-image">
+              <img src="https://c.saavncdn.com/807/Kabir-Singh-Hindi-2019-20240131131003-500x500.jpg" alt="Romantic Hits" />
+              </div>
             <h3>Romantic Hits</h3>
             <p>Love Songs Collection</p>
-          </div>
+          </div>  
           <div className="album-card">
-            <div className="album-image">Album 3</div>
+            <div className="album-image">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRr0_a0jw0XHp6HzSz_Hh0u60yzcwpTou1Evw&s" alt="Romantic Hits" />
+            </div>
             <h3>Latest Releases</h3>
             <p>Newest Tracks</p>
           </div>
