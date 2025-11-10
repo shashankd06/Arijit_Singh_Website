@@ -38,9 +38,8 @@ const Lyrics = () => {
       setLyrics(response.data);
     } catch (error) {
       console.error('Error fetching lyrics:', error);
+
       setLyrics(null);
-    } finally {
-      setLoading(false);
     }
   };
 
