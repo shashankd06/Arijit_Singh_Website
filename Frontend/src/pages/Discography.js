@@ -101,17 +101,59 @@ const Discography = () => {
         {activeTab === 'albums' && (
           <div className="grid">
             {albums.map((album) => (
-              <div key={album._id} className="card">
-                <div className="card-image-container">
-                  <div className="card-image" style={{ background: `linear-gradient(135deg, #8b0000, #a52a2a)` }}>
-                    {album.title}
-                  </div>
+              <div key={album._id} className="card" onClick={() => album.spotifyUrl && window.open(album.spotifyUrl, '_blank')}>
+                <div className="card-image-container" style={{position: 'relative'}}>
+                  <img
+                    src={album.coverImage}
+                    alt={album.title}
+                    className="card-image"
+                    onError={(e) => {
+                      // try proxy as a fallback to avoid hotlink / referrer issues
+                      e.target.onerror = null;
+                      const orig = album.coverImage || '';
+                      if (!orig) {
+                        // no image, hide img and show gradient
+                        e.target.style.display = 'none';
+                        const p = e.target.parentNode;
+                        p.style.background = 'linear-gradient(135deg, #8b0000, #a52a2a)';
+                        p.style.display = 'flex';
+                        p.style.alignItems = 'center';
+                        p.style.justifyContent = 'center';
+                        p.style.color = '#ffd700';
+                        p.textContent = album.title;
+                        return;
+                      }
+                      const proxy = 'https://images.weserv.nl/?url=' + encodeURIComponent(orig.replace(/^https?:\/\//, ''));
+                      // if current src is not proxy, switch to proxy
+                      if (e.target.src && !e.target.src.includes('images.weserv.nl')) {
+                        e.target.src = proxy;
+                      } else {
+                        // proxy failed too -> hide image and show gradient fallback
+                        e.target.style.display = 'none';
+                        const p = e.target.parentNode;
+                        p.style.background = 'linear-gradient(135deg, #8b0000, #a52a2a)';
+                        p.style.display = 'flex';
+                        p.style.alignItems = 'center';
+                        p.style.justifyContent = 'center';
+                        p.style.color = '#ffd700';
+                        p.textContent = album.title;
+                      }
+                    }}
+                  />
                 </div>
                 <h3 className="card-title">{album.title}</h3>
                 <p className="card-text">{album.description || 'Album description'}</p>
                 <p className="card-meta">Release: {new Date(album.releaseDate).getFullYear()}</p>
                 {album.songs && album.songs.length > 0 && (
                   <p className="card-meta">{album.songs.length} Songs</p>
+                )}
+                {album.spotifyUrl && (
+                  <button className="listen-button" onClick={(e) => {
+                    e.stopPropagation();
+                    window.open(album.spotifyUrl, '_blank');
+                  }}>
+                    Listen Now
+                  </button>
                 )}
               </div>
             ))}

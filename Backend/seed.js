@@ -27,17 +27,19 @@ const seedData = async () => {
     const album1 = await Album.create({
       title: 'Best of Arijit',
       releaseDate: new Date('2023-01-01'),
-      coverImage: 'https://via.placeholder.com/300',
+      coverImage: 'https://a10.gaanacdn.com/gn_pl_img/playlists/zLp36v3rGe/Lp36mQk0Kr/size_l_1761901613.webp',
       description: 'Greatest hits collection featuring all-time favorites',
-      genre: 'Bollywood'
+      genre: 'Bollywood',
+      spotifyUrl: 'https://youtu.be/kXHiIxx2atA?si=nrpdE04IhWZW7aCU'
     });
 
     const album2 = await Album.create({
       title: 'Romantic Hits',
       releaseDate: new Date('2023-06-01'),
-      coverImage: 'https://via.placeholder.com/300',
+      coverImage: 'https://c.saavncdn.com/804/Arijit-Romantic-Hits-Hindi-2018-20180424-500x500.jpg',
       description: 'Collection of romantic ballads and love songs',
-      genre: 'Bollywood'
+      genre: 'Bollywood',
+      spotifyUrl: 'https://open.spotify.com/playlist/37i9dQZF1DXbVipT9CLpYG'
     });
 
     // Create songs

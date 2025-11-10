@@ -48,6 +48,41 @@
   color: #ffd700;
   font-size: 1.2rem;
   font-weight: bold;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(255, 215, 0, 0.2);
+}
+
+.card:hover .card-image {
+  transform: scale(1.05);
+}
+
+.listen-button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #8b0000 0%, #a52a2a 100%);
+  border: 1px solid #ffd700;
+  color: #ffd700;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  font-weight: bold;
+}
+
+.listen-button:hover {
+  background: linear-gradient(135deg, #a52a2a 0%, #8b0000 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 3px 10px rgba(255, 215, 0, 0.3);
 }
 
 .card-meta {
