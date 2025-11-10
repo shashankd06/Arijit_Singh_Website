@@ -22,18 +22,9 @@ const Lyrics = () => {
       }
     } catch (error) {
       console.error('Error fetching songs:', error);
-      // Sample data
-      const sampleSongs = [
-        { _id: '1', title: 'Tum Hi Ho', movie: 'Aashiqui 2' },
-        { _id: '2', title: 'Channa Mereya', movie: 'Ae Dil Hai Mushkil' },
-        { _id: '3', title: 'Raabta', movie: 'Agent Vinod' }
-      ];
-      setSongs(sampleSongs);
-      setSelectedSong(sampleSongs[0]);
-      setLyrics({
-        lyrics: 'Tum hi ho, tum hi ho\nAas paas khuda\nTum hi ho, tum hi ho\nAas paas khuda...',
-        language: 'Hindi'
-      });
+      setSongs([]);
+      setSelectedSong(null);
+      setLyrics(null);
     } finally {
       setLoading(false);
     }
@@ -45,10 +36,8 @@ const Lyrics = () => {
       setLyrics(response.data);
     } catch (error) {
       console.error('Error fetching lyrics:', error);
-      setLyrics({
-        lyrics: 'Lyrics not available at the moment. Please check back later.',
-        language: 'Hindi'
-      });
+
+      setLyrics(null);
     }
   };
 
