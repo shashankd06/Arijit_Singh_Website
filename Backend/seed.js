@@ -185,84 +185,6 @@ const seedData = async () => {
     await Lyric.create([
       {
         song: song1._id,
-        lyrics: `Hum tere bin ab reh nahi sakte
-Tere bina kya wajood mera
-Tum dil ki dhadkan mein base ho
-Tum hi ho... tum hi ho`,
-        language: 'Hindi'
-      },
-      {
-        song: song2._id,
-        lyrics: `Channa mereya mereya
-Beliya o beliya
-Acha chalta hoon
-Duaaon mein yaad rakhna`,
-        language: 'Hindi'
-      },
-      {
-        song: song3._id,
-        lyrics: `Kuch toh hai tujh se raabta
-Kuch toh hai tujh se raabta
-Tera milna hai uss rab ka ishaara`,
-        language: 'Hindi'
-      },
-      {
-        song: song4._id,
-        lyrics: `Kesariya tera ishq hai pyaara
-Rang jaun jo main haara
-Kesariya tera ishq hai pyaara`,
-        language: 'Hindi'
-      },
-      {
-        song: song5._id,
-        lyrics: `Ae dil hai mushkil
-Tu mera humsafar
-Yeh safar hai mera aur tera`,
-        language: 'Hindi'
-      },
-      {
-        song: song6._id,
-        lyrics: `Shayad kabhi na keh saku
-Tum bin lagta nahi
-Par dil mein hai ummeed`,
-        language: 'Hindi'
-      },
-      {
-        song: song7._id,
-        lyrics: `Khairiyat pucho kabhi to
-Kaifiyat pucho tumhare bin
-Sab kuch adhoora hai`,
-        language: 'Hindi'
-      },
-      {
-        song: song8._id,
-        lyrics: `Hawayein si chalti rahe
-Tum tak mujhe le chale
-Hawayein si chalti rahe`,
-        language: 'Hindi'
-      },
-      {
-        song: song9._id,
-        lyrics: `Agar tum saath ho
-Behti si khushiyon ke dariya
-Agar tum saath ho`,
-        language: 'Hindi'
-      },
-      {
-        song: song10._id,
-        lyrics: `Tera yaar hoon main
-Tere saath hoon main
-Tera yaar hoon main`,
-        language: 'Hindi'
-      }
-    ]);
-
-<<<<<<< Updated upstream
-=======
-    // Create lyrics for all songs
-    await Lyric.create([
-      {
-        song: song1._id,
         lyrics: `[Verse 1]
 Hum tere bin ab reh nahi sakte
 Tere bina kya wajood mera?
@@ -359,33 +281,7 @@ Rain saari teri khair manaun
 Patjhad ke mausam mein bhi eangi chanaron jaisi
 Jhanke sannnaton mein tu veena ke taaron jaisi
 Hmm, sadiyon se bhi lambi yeh mann ki amavasein hain
-Aur tu phuljhadiyon wale tyoharon jaisi
-[Pre-Chorus]
-Chanda bhi deewana hai tera
-Jalti hai tujhse saari chhakoriyan
-Kajal ki siyahi se likhi
-Hai tune jaane kitno ki love storiyan
-
-[Chorus]
-Kesariya tera ishq hai, piya
-Rang jaaun jo main hath lagaun
-Din beete saara tеri fikr mein
-Rain saari teri khair manaun
-Kesariya tеra ishq hai, piya
-Rang jaaun jo main hath lagaun
-Din beete saara teri fikr mein
-Rain saari teri khair manaun
-
-[Outro]
-Kesariya tera ishq hai, piya, ishq hai, piya
-Kesariya tera ishq hai, piya, ishq hai, piya
-Piya, ishq hai, piya, ishq hai, piya
-Kesariya tera (Ishq hai, piya, ishq hai, piya, ishq hai, piya)
-Ishq hai piya (Ishq hai, piya, ishq hai, piya, ishq hai, piya)
-Rang jaaun jo main (Ishq hai, piya, ishq hai, piya, ishq hai, piya)
-Hath lagaun (Ishq hai, piya, ishq hai, piya, ishq hai, piya)
-(Ishq hai, piya, ishq hai, piya, ishq hai, piya)
-(Ishq hai, piya, ishq hai, piya, ishq hai, piya)`,
+Aur tu phuljhadiyon wale tyoharon jaisi`,
         language: 'Hindi'
       },
       {
@@ -432,7 +328,6 @@ Tera yaar hoon main`,
       }
     ]);
 
->>>>>>> Stashed changes
     // Create concerts
     await Concert.create([
       {
