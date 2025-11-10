@@ -47,3 +47,8 @@ The application uses a luxurious Bollywood theme with:
 - Maroon accents (#8b0000, #a52a2a)
 - Gold highlights (#ffd700, #d4af37)
 
+## contributers
+
+Shashank D
+Shashank Kesahava Murthy
+Shashank Palcharla 

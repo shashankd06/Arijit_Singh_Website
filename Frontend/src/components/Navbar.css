@@ -3,6 +3,7 @@
   top: 0;
   width: 100%;
   background: transparent;
+  
   backdrop-filter: none;
   border-bottom: none;
   z-index: 1000;
@@ -10,7 +11,7 @@
 }
 
 .navbar-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 15px 20px;
   display: flex;
@@ -22,6 +23,8 @@
   text-decoration: none;
   display: flex;
   flex-direction: column;
+  padding-left: 0;
+  width: auto;
 }
 
 .logo-text {
@@ -30,6 +33,7 @@
   color: #ffd700;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.5);
   letter-spacing: 2px;
+  white-space: nowrap;
 }
 
 .logo-subtitle {
@@ -37,12 +41,15 @@
   color: #d4af37;
   letter-spacing: 1px;
   text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.9), 0 0 8px rgba(0, 0, 0, 0.5);
+  white-space: nowrap;
 }
 
 .navbar-menu {
   display: flex;
   gap: 25px;
   align-items: center;
+  margin-left: auto;
+  justify-content: flex-end;
 }
 
 .navbar-link {
