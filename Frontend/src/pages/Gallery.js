@@ -19,15 +19,7 @@ const Gallery = () => {
       setGallery(response.data);
     } catch (error) {
       console.error('Error fetching gallery:', error);
-      // Sample data
-      setGallery([
-        { _id: '1', title: 'Concert Performance', imageUrl: 'https://via.placeholder.com/400', category: 'Concert' },
-        { _id: '2', title: 'Studio Session', imageUrl: 'https://via.placeholder.com/400', category: 'Studio' },
-        { _id: '3', title: 'Award Ceremony', imageUrl: 'https://via.placeholder.com/400', category: 'Awards' },
-        { _id: '4', title: 'Behind the Scenes', imageUrl: 'https://via.placeholder.com/400', category: 'Behind Scenes' },
-        { _id: '5', title: 'Personal Moment', imageUrl: 'https://via.placeholder.com/400', category: 'Personal' },
-        { _id: '6', title: 'Live Performance', imageUrl: 'https://via.placeholder.com/400', category: 'Concert' }
-      ]);
+      setGallery([]);
     } finally {
       setLoading(false);
     }
@@ -80,8 +72,15 @@ const Gallery = () => {
               className="gallery-item"
               onClick={() => setSelectedImage(item)}
             >
-              <div className="gallery-image" style={{ background: `linear-gradient(135deg, #8b0000, #a52a2a)` }}>
-                {item.title}
+              <div className="gallery-image">
+                <img 
+                  src={item.imageUrl} 
+                  alt={item.title}
+                  onError={(e) => {
+                    e.target.src = 'https://via.placeholder.com/400';
+                    console.error('Failed to load image:', item.imageUrl);
+                  }}
+                />
               </div>
               <div className="gallery-overlay">
                 <h3>{item.title}</h3>
@@ -96,8 +95,15 @@ const Gallery = () => {
         <div className="modal" onClick={() => setSelectedImage(null)}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <span className="close" onClick={() => setSelectedImage(null)}>&times;</span>
-            <div className="modal-image" style={{ background: `linear-gradient(135deg, #8b0000, #a52a2a)` }}>
-              {selectedImage.title}
+            <div className="modal-image">
+              <img 
+                src={selectedImage.imageUrl} 
+                alt={selectedImage.title}
+                onError={(e) => {
+                  e.target.src = 'https://via.placeholder.com/400';
+                  console.error('Failed to load image:', selectedImage.imageUrl);
+                }}
+              />
             </div>
             <h2>{selectedImage.title}</h2>
             <p>{selectedImage.description || 'Gallery image'}</p>

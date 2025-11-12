@@ -338,9 +338,10 @@ Tera yaar hoon main`,
         date: new Date('2024-12-15'),
         time: '7:00 PM',
         ticketUrl: 'https://example.com/tickets',
+        image: 'https://process.filestackapi.com/Ar1JhJgKrRMCHY5XInB1Iz/output=f:jpg/cache=expiry:max/https://cdn.filepicker.io/api/file/1M7C4iKgRFC74SPZzGsU',
         price: '₹2,000 - ₹10,000',
         description: 'Experience the magic of Arijit Singh live in concert',
-        isUpcoming: true
+        isUpcoming: false
       },
       {
         title: 'Arijit Singh Live in Delhi',
@@ -350,9 +351,10 @@ Tera yaar hoon main`,
         date: new Date('2025-01-20'),
         time: '7:00 PM',
         ticketUrl: 'https://example.com/tickets',
+        image: 'https://mir-s3-cdn-cf.behance.net/projects/404/93f6c2198581309.Y3JvcCwxNDE0LDExMDYsMCw0NDg.jpg',
         price: '₹2,000 - ₹10,000',
         description: 'An unforgettable evening with Arijit Singh',
-        isUpcoming: true
+        isUpcoming: false
       },
       {
         title: 'Arijit Singh Live in Bangalore',
@@ -362,8 +364,35 @@ Tera yaar hoon main`,
         date: new Date('2025-02-10'),
         time: '7:00 PM',
         ticketUrl: 'https://example.com/tickets',
+        image: 'https://i.pinimg.com/736x/03/77/2e/03772e1312e4fd6d94653dc945110fb4.jpg',
         price: '₹2,000 - ₹10,000',
         description: 'Join us for a soulful musical journey',
+        isUpcoming: false
+      },
+      {
+        title: 'Arijit Singh Live in Hyderabad',
+        venue: 'Gachibowli Stadium',
+        city: 'Hyderabad',
+        country: 'India',
+        date: new Date('2026-02-23'),
+        time: '7:00 PM',
+        ticketUrl: 'https://example.com/tickets',
+        image: 'https://process.filestackapi.com/Ar1JhJgKrRMCHY5XInB1Iz/output=f:jpg/cache=expiry:max/https://cdn.filepicker.io/api/file/1M7C4iKgRFC74SPZzGsU',
+        price: '₹2,000 – ₹10,000',
+        description: 'Experience soulful melodies echoing through Hyderabad\'s heart.',
+        isUpcoming: true
+      },
+      {
+        title: 'Arijit Singh Live in Bengaluru',
+        venue: 'Embassy International Riding School Arena',
+        city: 'Bengaluru',
+        country: 'India',
+        date: new Date('2026-02-08'),
+        time: '8:00 PM',
+        ticketUrl: 'https://example.com/tickets',
+        image: 'https://i.pinimg.com/736x/03/77/2e/03772e1312e4fd6d94653dc945110fb4.jpg',
+        price: '₹1,800 – ₹9,500',
+        description: 'Lose yourself in the rhythm of love and lights.',
         isUpcoming: true
       }
     ]);
@@ -447,31 +476,45 @@ Tera yaar hoon main`,
     await Gallery.create([
       {
         title: 'Concert Performance',
-        imageUrl: 'https://via.placeholder.com/400',
+        imageUrl: 'https://rollingstoneindia.com/wp-content/uploads/2024/10/Arijit-Singh-Stage-scaled.jpeg',
         category: 'Concert',
         description: 'Live performance at concert',
         featured: true
       },
       {
         title: 'Studio Session',
-        imageUrl: 'https://via.placeholder.com/400',
+        imageUrl: 'https://i.ytimg.com/vi/7GWYOvr1fdM/hq720.jpg?sqp=-oaymwEXCK4FEIIDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLDsjWx4q0MZUTJSs0h00Xm_WfzdHg',
         category: 'Studio',
         description: 'Recording in studio',
         featured: false
       },
       {
         title: 'Award Ceremony',
-        imageUrl: 'https://via.placeholder.com/400',
+        imageUrl: 'https://static.toiimg.com/photo/29339610.cms?imgsize=116593',
         category: 'Awards',
         description: 'Receiving award',
         featured: true
       },
       {
         title: 'Behind the Scenes',
-        imageUrl: 'https://via.placeholder.com/400',
+        imageUrl: 'https://i.ytimg.com/vi/RCvdVGV9NZM/hq720.jpg?sqp=-oaymwE7CK4FEIIDSFryq4qpAy0IARUAAAAAGAElAADIQj0AgKJD8AEB-AH6CYAC0AWKAgwIABABGH8gNSgTMA8=&rs=AOn4CLARO85_rgp8VQKxo13pURg8ynZ0Xw',
         category: 'Behind Scenes',
         description: 'Behind the scenes moment',
         featured: false
+      },
+      {
+        title: 'Personal Moment',
+        imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHPeVKSVdEkP3_lzeS_dzJGEu3D9aanxYm9Q&s',
+        category: 'Personal',
+        description: 'Personal moment captured',
+        featured: false
+      },
+      {
+        title: 'Live Performance',
+        imageUrl: 'https://i.pinimg.com/736x/03/77/2e/03772e1312e4fd6d94653dc945110fb4.jpg',
+        category: 'Concert',
+        description: 'Live performance on stage',
+        featured: true
       }
     ]);
 

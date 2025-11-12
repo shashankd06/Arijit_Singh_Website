@@ -21,45 +21,8 @@ const Concerts = () => {
     } catch (err) {
       setError('Failed to load concerts. Please try again later.');
       console.error(err);
-      // Sample data
-      setConcerts([
-        {
-          _id: '1',
-          title: 'Arijit Singh Live in Mumbai',
-          venue: 'Wankhede Stadium',
-          city: 'Mumbai',
-          country: 'India',
-          date: '2024-12-15',
-          time: '7:00 PM',
-          ticketUrl: '#',
-          price: '₹2,000 - ₹10,000',
-          description: 'Experience the magic of Arijit Singh live in concert'
-        },
-        {
-          _id: '2',
-          title: 'Arijit Singh Live in Delhi',
-          venue: 'Jawaharlal Nehru Stadium',
-          city: 'Delhi',
-          country: 'India',
-          date: '2025-01-20',
-          time: '7:00 PM',
-          ticketUrl: '#',
-          price: '₹2,000 - ₹10,000',
-          description: 'An unforgettable evening with Arijit Singh'
-        },
-        {
-          _id: '3',
-          title: 'Arijit Singh Live in Bangalore',
-          venue: 'Palace Grounds',
-          city: 'Bangalore',
-          country: 'India',
-          date: '2025-02-10',
-          time: '7:00 PM',
-          ticketUrl: '#',
-          price: '₹2,000 - ₹10,000',
-          description: 'Join us for a soulful musical journey'
-        }
-      ]);
+      
+      setConcerts([]);
     } finally {
       setLoading(false);
     }
@@ -94,7 +57,10 @@ const Concerts = () => {
           {concerts.map((concert) => (
             <div key={concert._id} className="concert-card">
               <div className="concert-image">
-                <div className="image-placeholder">Concert</div>
+                <img
+                  src={concert.image || 'https://upload.wikimedia.org/wikipedia/commons/5/5b/Wankhede_Stadium.jpg'}
+                  alt={concert.venue}
+                />
               </div>
               <div className="concert-content">
                 <h3 className="concert-title">{concert.title}</h3>
